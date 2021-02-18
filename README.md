@@ -1,3 +1,3 @@
 # MST_dashboard
 
-- `Modification on ititial commiet`
+- `Modification on initial commit`
