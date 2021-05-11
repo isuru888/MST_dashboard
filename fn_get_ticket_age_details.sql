@@ -78,25 +78,26 @@ SELECT k.KEY,
 	 aot.updated_age,
 	 aot.created_age
 			FROM PULSE.all_open_tickets aot
-			UNION ALL SELECT act.KEY ,
-							 act.created_month_year ,
-							 act.created_date ,
-							 to_char(act.created_date, 'Day') AS "created_day" , --extract(hour from created_date ) AS created_hour,
-	 act.created_date::time AS created_time ,
-	 act.creator_name ,
-	 act.creator_name2 ,
-	 act.current_assignee_name ,
-	 act.current_status ,
-	 act.issue_type ,
-	 act.priority ,
-	 act.priority2 ,
-	 act.project_name ,
-	 act.summary ,
-	 act.updated,
-	 act.planing_date,
-	 act.updated_age,
-	 act.created_age
-			FROM PULSE.all_closed_tickets  act ) k
+			-- UNION ALL SELECT act.KEY ,
+							 -- act.created_month_year ,
+							 -- act.created_date ,
+							 -- to_char(act.created_date, 'Day') AS "created_day" , --extract(hour from created_date ) AS created_hour,
+	 -- act.created_date::time AS created_time ,
+	 -- act.creator_name ,
+	 -- act.creator_name2 ,
+	 -- act.current_assignee_name ,
+	 -- act.current_status ,
+	 -- act.issue_type ,
+	 -- act.priority ,
+	 -- act.priority2 ,
+	 -- act.project_name ,
+	 -- act.summary ,
+	 -- act.updated,
+	 -- act.planing_date,
+	 -- act.updated_age,
+	 -- act.created_age
+			-- FROM PULSE.all_closed_tickets  act 
+			) k
 
 WHERE
 	CASE WHEN array_length(v_project_name, 1) > 0  THEN
